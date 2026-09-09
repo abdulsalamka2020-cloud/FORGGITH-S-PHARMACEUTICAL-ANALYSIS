@@ -55,7 +55,7 @@ Custom DAX measures were created to power the KPI cards and visuals across all f
 
 ### Page 1 — Executive Overview
 
-![Executive Overview](images/01_executive_overview.png)
+![Executive Overview](01_executive_overview.png)
 
 The landing page and company-wide summary.
 - KPI cards: Total Revenue, Total Quantity Sold, Qty Variance to Target, YoY Growth %
@@ -69,7 +69,7 @@ The landing page and company-wide summary.
 
 ### Page 2 - Sales Performance
 
-![Sales Performance](images/02_sales_performance.png)
+![Sales Performance](02_sales_performance.png)
 
 A deeper look at revenue vs. target and distributor performance.
 - KPI cards: Total Revenue, Total Target, Target Achievement %, YoY Growth %
@@ -83,7 +83,7 @@ A deeper look at revenue vs. target and distributor performance.
 
 ### Page 3 — Sales Team Performance
 
-![Sales Team Performance](images/03_sales_team_performance.png)
+![Sales Team Performance](03_sales_team_performance.png)
 
 Performance of Forgith's commercial teams and individual sales reps.
 - KPI cards: Total Revenue, Total Sales Reps
@@ -96,7 +96,7 @@ Performance of Forgith's commercial teams and individual sales reps.
 
 ### Page 4 — Geographic Performance Analysis
 
-![Geographic Performance Analysis](images/04_geographic_analysis.png)
+![Geographic Performance Analysis](04_geographic_analysis.png)
 
 Revenue distribution across markets.
 - KPI cards: Total Revenue, Total Number of Cities
