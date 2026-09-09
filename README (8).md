@@ -6,7 +6,7 @@ A 4-page Power BI report analyzing Forgith Pharmaceutical's sales, marketing, an
 
 ## Overview
 
-This dashboard was built to give Forgith Pharmaceutical's executives a single, interactive view of company-wide commercial performance — covering overall sales health, distributor and target performance, sales team productivity, and geographic revenue distribution. It is designed for stakeholders who need to move from a high-level company snapshot down to team- and city-level detail without switching tools.
+This dashboard was built to give Forgith Pharmaceutical's executives a single, interactive view of company-wide commercial performance - covering overall sales health, distributor and target performance, sales team productivity, and geographic revenue distribution. It is designed for stakeholders who need to move from a high-level company snapshot down to team- and city-level detail without switching tools.
 
 **Key company-wide metrics:**
 - Total Revenue: **$11.12bn**
@@ -21,25 +21,25 @@ This dashboard was built to give Forgith Pharmaceutical's executives a single, i
 
 The dashboard was built using a three-stage workflow, moving raw data from documentation through cleaning to modelling and analysis:
 
-### 1. Data Dictionary — Microsoft Excel
+### 1. Data Dictionary - Microsoft Excel
 Before touching Power BI, a full data dictionary was built in Excel to document the structure of the dataset ahead of modelling. It defines each table, its columns, and the business meaning of every field.
 
 ![Forgith Data Dictionary](images/00_data_dictionary.png)
 
 The dictionary covers:
-- **Dim_Location** — unique city locations with latitude/longitude coordinates
-- **Dim_Subchannel** — subchannels and their parent sales channel
-- **Dim_Channel** — the two main sales channels (Hospital, Pharmacy)
-- **Dim_Product** — product name, product class, and price
-- **Dim_Employee** — employee name, manager, and team
+- **Dim_Location** - unique city locations with latitude/longitude coordinates
+- **Dim_Subchannel** - subchannels and their parent sales channel
+- **Dim_Channel** - the two main sales channels (Hospital, Pharmacy)
+- **Dim_Product** - product name, product class, and price
+- **Dim_Employee** - employee name, manager, and team
 - **Sales 2022** and **Sales 2023–2025** — the fact tables recording monthly sales transactions (Sales ID, MonthYear, Distributor, Customer, Location, Subchannel, Product, Quantity)
 
 This dictionary served as the reference point for consistent naming and relationships throughout the build.
 
-### 2. Data Cleaning — Power Query Editor
+### 2. Data Cleaning - Power Query Editor
 Raw data was cleaned and shaped in the Power Query Editor before being loaded into the model, including standardizing column formats, handling inconsistent entries, and preparing the separate yearly sales tables (2022, and 2023–2025) for combination and use in the star schema.
 
-### 3. Data Modelling — Power BI
+### 3. Data Modelling - Power BI
 A star schema was built in Power BI, connecting the fact tables (Sales 2022, Sales 2023–2025) to the dimension tables (Location, Subchannel, Channel, Product, Employee) defined in the data dictionary. This structure supports the cross-filtering used throughout the report (e.g., filtering by Channel, City, or Year across multiple visuals).
 
 ### 4. DAX Measures
@@ -53,7 +53,7 @@ Custom DAX measures were created to power the KPI cards and visuals across all f
 
 ## Report Pages
 
-### Page 1 — Executive Overview
+### Page 1 - Executive Overview
 
 ![Executive Overview](images/01_executive_overview.png)
 
@@ -94,7 +94,7 @@ Performance of Forgith's commercial teams and individual sales reps.
 
 **Key insights surfaced:** Team Delta (led by Britanny Bold) is the clear leader with ~$3.43bn in revenue and 41% target achievement, while the other three teams are tightly clustered around $2.4–2.7bn at ~30%; the company's overall 131.7% achievement is concentrated in one team, indicating a dependency risk; just 13 reps support $11.12bn in revenue, reflecting high productivity per rep.
 
-### Page 4 — Geographic Performance Analysis
+### Page 4 - Geographic Performance Analysis
 
 ![Geographic Performance Analysis](images/04_geographic_analysis.png)
 
@@ -117,7 +117,7 @@ All four pages share a consistent left-hand navigation panel with buttons to jum
 
 ## Data Model Structure (from Data Dictionary)
 
-| Table | Type | Grain |
+| Table | Type | Row Level Definition |
 |---|---|---|
 | Dim_Location | Dimension | One row = one city location (LocationID, City, Latitude, Longitude) |
 | Dim_Subchannel | Dimension | One row = one subchannel and its parent channel |
@@ -133,13 +133,13 @@ All four pages share a consistent left-hand navigation panel with buttons to jum
 
 Based on the patterns surfaced across all four pages, the following actions are recommended:
 
-1. **Reduce dependency risk on Team Delta.** Team Delta drives a disproportionate share of the company's 131.7% target over-achievement (41% vs. ~30% for the other three teams). Management should study Delta's approach — territory allocation, distributor relationships, product mix — and pilot replicating it with Alfa, Bravo, and Charlie to spread performance more evenly and de-risk future target-setting.
+1. **Reduce dependency risk on Team Delta.** Team Delta drives a disproportionate share of the company's 131.7% target over-achievement (41% vs. ~30% for the other three teams). Management should study Delta's approach - territory allocation, distributor relationships, product mix  and pilot replicating it with Alfa, Bravo, and Charlie to spread performance more evenly and de-risk future target-setting.
 
 2. **Investigate the cause of monthly sales volatility.** The Yearly Sales Trend shows sharp spikes and dips rather than a smooth growth curve. This should be cross-checked against distributor ordering cycles, promotional calendars, and stock-outs to determine whether the volatility is demand-driven or a symptom of inconsistent distributor ordering behavior that could be smoothed with better forecasting.
 
 3. **Formalize and protect top distributor relationships, while reducing reliance on them.** Gerlach LLC and the other top-5 distributors account for the bulk of sales volume. These relationships should be safeguarded with clear service agreements, while a parallel effort develops mid-tier distributors to reduce concentration risk if a top distributor's volume drops.
 
-4. **Develop the long tail of the 549-city footprint.** Revenue is heavily concentrated in the top 10 cities (led by Butzbach), which follow a steep Pareto drop-off. Since smaller cities show more consistent target achievement, there is an opportunity to grow absolute revenue in these markets — they are performing well relative to target but from a smaller base, suggesting room to scale rather than just retain.
+4. **Develop the long tail of the 549-city footprint.** Revenue is heavily concentrated in the top 10 cities (led by Butzbach), which follow a steep Pareto drop-off. Since smaller cities show more consistent target achievement, there is an opportunity to grow absolute revenue in these markets , they are performing well relative to target but from a smaller base, suggesting room to scale rather than just retain.
 
 5. **Reassess Antibiotics' leading position for portfolio risk.** Antibiotics is the top product class by revenue; while positive for current performance, over-reliance on a single class exposes the business to regulatory, pricing, or competitive shocks specific to that category. A periodic review of product class mix alongside Antiseptics, Mood Stabilizers, and other classes is recommended to guide future investment and marketing spend.
 
