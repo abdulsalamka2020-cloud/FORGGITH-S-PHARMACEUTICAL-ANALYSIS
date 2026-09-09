@@ -24,7 +24,7 @@ The dashboard was built using a three-stage workflow, moving raw data from docum
 ### 1. Data Dictionary — Microsoft Excel
 Before touching Power BI, a full data dictionary was built in Excel to document the structure of the dataset ahead of modelling. It defines each table, its columns, and the business meaning of every field.
 
-![Forgith Data Dictionary](images/00_data_dictionary.png)
+![Data Dictionary](00_data_dictionary.png)
 
 The dictionary covers:
 - **Dim_Location** - unique city locations with latitude/longitude coordinates
