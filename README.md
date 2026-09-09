@@ -146,3 +146,6 @@ Based on the patterns surfaced across all four pages, the following actions are 
 6. **Use the Pharmacy/Hospital channel split to guide channel-specific strategy.** With Pharmacy at 52.9% and Hospital at 47.1%, both channels are commercially significant. Channel-specific promotional and distribution strategies (rather than a one-size-fits-all approach) could help grow the smaller Hospital channel while protecting the Pharmacy lead.
 
 7. **Recognize and study top individual performers.** Sheila Stones and the other top 5 reps by target achievement should be reviewed for best practices (client relationships, territory approach, product focus) that could be shared across the 13-person sales team, especially given how few reps are driving the full $11.12bn in revenue.
+
+** Link to assess my workspace on PowerBI Service
+- https://app.powerbi.com/view?r=eyJrIjoiYWUxNzMzNWYtNjZmMi00OGVhLTg5OGEtODMwNzkxZmRhYzFiIiwidCI6IjQ4NTkyZTczLTE2OTUtNGVmMy1hYzg3LWM0ZDNjMGVhNDYzMyJ9
