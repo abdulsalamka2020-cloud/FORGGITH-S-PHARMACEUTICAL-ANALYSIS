@@ -27,12 +27,12 @@ Before touching Power BI, a full data dictionary was built in Excel to document 
 ![Forgith Data Dictionary](images/00_data_dictionary.png)
 
 The dictionary covers:
-- **Dim_Location** — unique city locations with latitude/longitude coordinates
-- **Dim_Subchannel** — subchannels and their parent sales channel
-- **Dim_Channel** — the two main sales channels (Hospital, Pharmacy)
-- **Dim_Product** — product name, product class, and price
-- **Dim_Employee** — employee name, manager, and team
-- **Sales 2022** and **Sales 2023–2025** — the fact tables recording monthly sales transactions (Sales ID, MonthYear, Distributor, Customer, Location, Subchannel, Product, Quantity)
+- **Dim_Location** - unique city locations with latitude/longitude coordinates
+- **Dim_Subchannel** - subchannels and their parent sales channel
+- **Dim_Channel** - the two main sales channels (Hospital, Pharmacy)
+- **Dim_Product** - product name, product class, and price
+- **Dim_Employee** - employee name, manager, and team
+- **Sales 2022** and **Sales 2023–2025** - the fact tables recording monthly sales transactions (Sales ID, MonthYear, Distributor, Customer, Location, Subchannel, Product, Quantity)
 
 This dictionary served as the reference point for consistent naming and relationships throughout the build.
 
@@ -67,7 +67,7 @@ The landing page and company-wide summary.
 
 **Key insights surfaced:** Forgith grew 31.44% YoY; sales volume finished ~6M units above target; Antibiotics leads by product class; Pharmacy contributes the larger revenue share (52.9%) over Hospital (47.1%); monthly sales show notable fluctuation worth investigating for demand/ordering patterns.
 
-### Page 2 — Sales Performance
+### Page 2 - Sales Performance
 
 ![Sales Performance](images/02_sales_performance.png)
 
@@ -117,7 +117,7 @@ All four pages share a consistent left-hand navigation panel with buttons to jum
 
 ## Data Model Structure (from Data Dictionary)
 
-| Table | Type | Grain |
+| Table | Type | Row Level Definition |
 |---|---|---|
 | Dim_Location | Dimension | One row = one city location (LocationID, City, Latitude, Longitude) |
 | Dim_Subchannel | Dimension | One row = one subchannel and its parent channel |
@@ -133,13 +133,13 @@ All four pages share a consistent left-hand navigation panel with buttons to jum
 
 Based on the patterns surfaced across all four pages, the following actions are recommended:
 
-1. **Reduce dependency risk on Team Delta.** Team Delta drives a disproportionate share of the company's 131.7% target over-achievement (41% vs. ~30% for the other three teams). Management should study Delta's approach — territory allocation, distributor relationships, product mix — and pilot replicating it with Alfa, Bravo, and Charlie to spread performance more evenly and de-risk future target-setting.
+1. **Reduce dependency risk on Team Delta.** Team Delta drives a disproportionate share of the company's 131.7% target over-achievement (41% vs. ~30% for the other three teams). Management should study Delta's approach — territory allocation, distributor relationships, product mix, and pilot replicating it with Alfa, Bravo, and Charlie to spread performance more evenly and de-risk future target-setting.
 
 2. **Investigate the cause of monthly sales volatility.** The Yearly Sales Trend shows sharp spikes and dips rather than a smooth growth curve. This should be cross-checked against distributor ordering cycles, promotional calendars, and stock-outs to determine whether the volatility is demand-driven or a symptom of inconsistent distributor ordering behavior that could be smoothed with better forecasting.
 
 3. **Formalize and protect top distributor relationships, while reducing reliance on them.** Gerlach LLC and the other top-5 distributors account for the bulk of sales volume. These relationships should be safeguarded with clear service agreements, while a parallel effort develops mid-tier distributors to reduce concentration risk if a top distributor's volume drops.
 
-4. **Develop the long tail of the 549-city footprint.** Revenue is heavily concentrated in the top 10 cities (led by Butzbach), which follow a steep Pareto drop-off. Since smaller cities show more consistent target achievement, there is an opportunity to grow absolute revenue in these markets — they are performing well relative to target but from a smaller base, suggesting room to scale rather than just retain.
+4. **Develop the long tail of the 549-city footprint.** Revenue is heavily concentrated in the top 10 cities (led by Butzbach), which follow a steep Pareto drop-off. Since smaller cities show more consistent target achievement, there is an opportunity to grow absolute revenue in these markets, they are performing well relative to target but from a smaller base, suggesting room to scale rather than just retain.
 
 5. **Reassess Antibiotics' leading position for portfolio risk.** Antibiotics is the top product class by revenue; while positive for current performance, over-reliance on a single class exposes the business to regulatory, pricing, or competitive shocks specific to that category. A periodic review of product class mix alongside Antiseptics, Mood Stabilizers, and other classes is recommended to guide future investment and marketing spend.
 
