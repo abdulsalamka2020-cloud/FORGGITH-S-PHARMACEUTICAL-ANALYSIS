@@ -21,7 +21,7 @@ This dashboard was built to give Forgith Pharmaceutical's executives a single, i
 
 The dashboard was built using a three-stage workflow, moving raw data from documentation through cleaning to modelling and analysis:
 
-### 1. Data Dictionary — Microsoft Excel
+### 1. Data Dictionary - Microsoft Excel
 Before touching Power BI, a full data dictionary was built in Excel to document the structure of the dataset ahead of modelling. It defines each table, its columns, and the business meaning of every field.
 
 ![Data Dictionary](00_data_dictionary.png)
@@ -36,10 +36,10 @@ The dictionary covers:
 
 This dictionary served as the reference point for consistent naming and relationships throughout the build.
 
-### 2. Data Cleaning — Power Query Editor
+### 2. Data Cleaning - Power Query Editor
 Raw data was cleaned and shaped in the Power Query Editor before being loaded into the model, including standardizing column formats, handling inconsistent entries, and preparing the separate yearly sales tables (2022, and 2023–2025) for combination and use in the star schema.
 
-### 3. Data Modelling — Power BI
+### 3. Data Modelling - Power BI
 A star schema was built in Power BI, connecting the fact tables (Sales 2022, Sales 2023–2025) to the dimension tables (Location, Subchannel, Channel, Product, Employee) defined in the data dictionary. This structure supports the cross-filtering used throughout the report (e.g., filtering by Channel, City, or Year across multiple visuals).
 
 ### 4. DAX Measures
@@ -53,7 +53,7 @@ Custom DAX measures were created to power the KPI cards and visuals across all f
 
 ## Report Pages
 
-### Page 1 — Executive Overview
+### Page 1 - Executive Overview
 
 ![Executive Overview](01_executive_overview.png)
 
@@ -81,7 +81,7 @@ A deeper look at revenue vs. target and distributor performance.
 
 **Key insights surfaced:** Forgith hit 131.70% of its sales target, exceeding it by 31.70%; the top 5 distributors (led by Gerlach LLC) account for a substantial share of total volume, underlining their importance to overall commercial performance.
 
-### Page 3 — Sales Team Performance
+### Page 3 - Sales Team Performance
 
 ![Sales Team Performance](03_sales_team_performance.png)
 
@@ -94,7 +94,7 @@ Performance of Forgith's commercial teams and individual sales reps.
 
 **Key insights surfaced:** Team Delta (led by Britanny Bold) is the clear leader with ~$3.43bn in revenue and 41% target achievement, while the other three teams are tightly clustered around $2.4–2.7bn at ~30%; the company's overall 131.7% achievement is concentrated in one team, indicating a dependency risk; just 13 reps support $11.12bn in revenue, reflecting high productivity per rep.
 
-### Page 4 — Geographic Performance Analysis
+### Page 4 - Geographic Performance Analysis
 
 ![Geographic Performance Analysis](04_geographic_analysis.png)
 
